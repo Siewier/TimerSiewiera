@@ -40,38 +40,41 @@ namespace TimerSiewiera
         }
         private void dispatcherTimer_Tick(object sender, EventArgs e)
         {
-            if (sekundy == 0)
+            if (dispatcherTimer.IsEnabled == true)
             {
-                if (minuty == 0)
+                if (sekundy == 0)
                 {
-                    if (godziny == 0)
+                    if (minuty == 0)
                     {
-                        //koniec odliczania
-                        dispatcherTimer.Stop();
-                        //MessageBox.Show("Czas minął!", "Alarm!");
-                        Alarm KoniecCzasu = new Alarm();
-                        KoniecCzasu.Owner = this;
-                        KoniecCzasu.Show();
+                        if (godziny == 0)
+                        {
+                            //koniec odliczania
+                            dispatcherTimer.Stop();
+                            //MessageBox.Show("Czas minął!", "Alarm!");
+                            Alarm KoniecCzasu = new Alarm();
+                            KoniecCzasu.Owner = this;
+                            KoniecCzasu.Show();
 
+                        }
+                        else
+                        {
+                            godziny = godziny - 1;
+                            minuty = 59;
+                            Wyswietl();
+                        }
                     }
                     else
                     {
-                        godziny = godziny - 1;
-                        minuty = 59;
+                        minuty = minuty - 1;
+                        sekundy = 59;
                         Wyswietl();
-                    } 
+                    }
                 }
                 else
                 {
-                    minuty = minuty - 1;
-                    sekundy = 59;
+                    sekundy = sekundy - 1;
                     Wyswietl();
                 }
-            }
-            else
-            {
-                sekundy = sekundy - 1;
-                Wyswietl();
             }
         }
 
