@@ -1,0 +1,54 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ee="http://schemas.microsoft.com/expression/2010/effects" x:Class="TimerSiewiera.MainWindow"
+        Title="Timer Siewiera" Height="325" Width="530" ResizeMode="NoResize">
+	<Grid>
+		<Label x:Name="labelCzas" Content="00:00:00" HorizontalAlignment="Left" Margin="140,40,0,0" VerticalAlignment="Top" FontSize="64" FontFamily="Impact">
+			<Label.Effect>
+				<DropShadowEffect Opacity="0.5" ShadowDepth="10"/>
+			</Label.Effect>
+		</Label>
+		<Button x:Name="btnStart" Content="Start" HorizontalAlignment="Left" Margin="10,223.04,0,0" VerticalAlignment="Top" Width="165" Height="55" FontSize="26.667" FontWeight="Bold" Click="btnStart_Click">
+			<Button.Background>
+				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+					<GradientStop Color="White" Offset="0"/>
+					<GradientStop Color="#FF47A02D" Offset="1"/>
+				</LinearGradientBrush>
+			</Button.Background>
+		</Button>
+		<Button x:Name="btnStop" Content="Stop" HorizontalAlignment="Left" Margin="344,223.04,0,0" VerticalAlignment="Top" Width="165" Height="55" FontSize="26.667" FontWeight="Bold" Click="btnStop_Click">
+			<Button.Background>
+				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+					<GradientStop Color="White" Offset="0"/>
+					<GradientStop Color="#FFEC0E0E" Offset="1"/>
+				</LinearGradientBrush>
+			</Button.Background>
+		</Button>
+		<Button x:Name="btnPausa" Content="Pausa" HorizontalAlignment="Left" Margin="180,223.04,0,0" VerticalAlignment="Top" Width="159" Height="55" FontSize="26.667" FontWeight="Bold" Click="btnPausa_Click">
+			<Button.Background>
+				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+					<GradientStop Color="White" Offset="0"/>
+					<GradientStop Color="#FFB8951E" Offset="1"/>
+				</LinearGradientBrush>
+			</Button.Background>
+		</Button>
+		<Button x:Name="btnTrzydziesci" Content="+ 30 minut" HorizontalAlignment="Left" Margin="92,163.04,0,0" VerticalAlignment="Top" Width="165" Height="55" FontSize="21.333" FontWeight="Bold" Click="btnTrzydziesci_Click">
+			<Button.Background>
+				<RadialGradientBrush>
+					<GradientStop Color="#FF7A7A7A" Offset="0"/>
+					<GradientStop Color="White" Offset="1"/>
+				</RadialGradientBrush>
+			</Button.Background>
+		</Button>
+		<Button x:Name="btnGodzina" Content="+ 1 godzina" HorizontalAlignment="Left" Margin="262,163.04,0,0" VerticalAlignment="Top" Width="165" Height="55" FontSize="21.333" FontWeight="Bold" Click="btnGodzina_Click">
+			<Button.Background>
+				<RadialGradientBrush>
+					<GradientStop Color="#FF7A7A7A" Offset="0"/>
+					<GradientStop Color="White" Offset="1"/>
+				</RadialGradientBrush>
+			</Button.Background>
+		</Button>
+        
+	</Grid>
+</Window>
