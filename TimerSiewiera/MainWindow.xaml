@@ -3,7 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:ee="http://schemas.microsoft.com/expression/2010/effects" x:Class="TimerSiewiera.MainWindow"
         Title="Timer Siewiera" Height="325" Width="530" ResizeMode="NoResize">
-	<Grid>
+
+    <Grid>
 		<Label x:Name="labelCzas" Content="00:00:00" HorizontalAlignment="Left" Margin="140,40,0,0" VerticalAlignment="Top" FontSize="64" FontFamily="Impact">
 			<Label.Effect>
 				<DropShadowEffect Opacity="0.5" ShadowDepth="10"/>
@@ -33,7 +34,7 @@
 				</LinearGradientBrush>
 			</Button.Background>
 		</Button>
-		<Button x:Name="btnTrzydziesci" Content="+ 30 minut" HorizontalAlignment="Left" Margin="92,163.04,0,0" VerticalAlignment="Top" Width="165" Height="55" FontSize="21.333" FontWeight="Bold" Click="btnTrzydziesci_Click">
+		<Button x:Name="btnTrzydziesci" Content="+ 30 minut" HorizontalAlignment="Left" Margin="92,163.04,0,0" VerticalAlignment="Top" Width="165" Height="55" FontSize="21.333" FontWeight="Bold" Click="btnTrzydziesci_Click" BorderBrush="{x:Null}">
 			<Button.Background>
 				<RadialGradientBrush>
 					<GradientStop Color="#FF7A7A7A" Offset="0"/>
@@ -41,7 +42,7 @@
 				</RadialGradientBrush>
 			</Button.Background>
 		</Button>
-		<Button x:Name="btnGodzina" Content="+ 1 godzina" HorizontalAlignment="Left" Margin="262,163.04,0,0" VerticalAlignment="Top" Width="165" Height="55" FontSize="21.333" FontWeight="Bold" Click="btnGodzina_Click">
+		<Button x:Name="btnGodzina" Content="+ 1 godzina" HorizontalAlignment="Left" Margin="262,163.04,0,0" VerticalAlignment="Top" Width="165" Height="55" FontSize="21.333" FontWeight="Bold" Click="btnGodzina_Click" BorderBrush="{x:Null}">
 			<Button.Background>
 				<RadialGradientBrush>
 					<GradientStop Color="#FF7A7A7A" Offset="0"/>

@@ -125,6 +125,7 @@ namespace TimerSiewiera
                 textDoLabelki = textDoLabelki + sekundy.ToString();
             }
             labelCzas.Content = textDoLabelki;
+            
         }
 
         private void btnGodzina_Click(object sender, RoutedEventArgs e)
@@ -145,7 +146,17 @@ namespace TimerSiewiera
             minuty = 0;
             sekundy = 0;
             Wyswietl();
+            labelCzas.Refresh();
         } 
+    }
+    //http://geekswithblogs.net/NewThingsILearned/archive/2008/08/25/refresh--update-wpf-controls.aspx
+    public static class ExtensionMethods
+    {
+        private static Action EmptyDelegate = delegate() { };
 
+        public static void Refresh(this UIElement uiElement)
+        {
+            uiElement.Dispatcher.Invoke(DispatcherPriority.Render, EmptyDelegate);
+        }
     }
 }

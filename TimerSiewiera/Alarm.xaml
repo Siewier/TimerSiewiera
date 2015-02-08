@@ -4,7 +4,14 @@
         Title="Alarm" Height="145" Width="300" ResizeMode="NoResize" WindowStyle="ToolWindow" WindowStartupLocation="CenterScreen" Topmost="True">
     <Grid>
         <Label Content="Koniec czasu!" HorizontalAlignment="Center" Margin="69,10,78,0" VerticalAlignment="Top" Width="147" FontSize="24"/>
-        <Button Content="OK" HorizontalAlignment="Left" Margin="69,57,0,0" VerticalAlignment="Top" Width="147" Height="45" FontSize="16" FontWeight="Bold" Click="Button_Click"/>
+        <Button Content="OK" HorizontalAlignment="Left" Margin="69,57,0,0" VerticalAlignment="Top" Width="147" Height="45" FontSize="16" FontWeight="Bold" Click="Button_Click" BorderBrush="{x:Null}">
+        	<Button.Background>
+        		<RadialGradientBrush>
+        			<GradientStop Color="Red" Offset="0"/>
+        			<GradientStop Color="White" Offset="1"/>
+        		</RadialGradientBrush>
+        	</Button.Background>
+        </Button>
 
     </Grid>
 </Window>
