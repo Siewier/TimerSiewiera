@@ -136,7 +136,15 @@ namespace TimerSiewiera
 
         private void btnPausa_Click(object sender, RoutedEventArgs e)
         {
-            dispatcherTimer.Stop();
+            if (dispatcherTimer.IsEnabled == true)
+            {
+                dispatcherTimer.Stop(); 
+            }
+            else
+            {
+                dispatcherTimer.Start();
+            }
+            
         }
 
         private void btnStop_Click(object sender, RoutedEventArgs e)
