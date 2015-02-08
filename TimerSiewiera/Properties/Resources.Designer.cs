@@ -9,6 +9,7 @@
 //------------------------------------------------------------------------------
 
 namespace TimerSiewiera.Properties {
+    using System;
     
     
     /// <summary>
@@ -37,7 +38,7 @@ namespace TimerSiewiera.Properties {
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
-                if ((resourceMan == null)) {
+                if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("TimerSiewiera.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
@@ -56,6 +57,15 @@ namespace TimerSiewiera.Properties {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream TornadoSiren {
+            get {
+                return ResourceManager.GetStream("TornadoSiren", resourceCulture);
             }
         }
     }

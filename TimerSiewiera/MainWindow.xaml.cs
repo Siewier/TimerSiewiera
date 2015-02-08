@@ -48,7 +48,10 @@ namespace TimerSiewiera
                     {
                         //koniec odliczania
                         dispatcherTimer.Stop();
-                        MessageBox.Show("Czas minął!", "Alarm!");
+                        //MessageBox.Show("Czas minął!", "Alarm!");
+                        Alarm KoniecCzasu = new Alarm();
+                        KoniecCzasu.Owner = this;
+                        KoniecCzasu.Show();
 
                     }
                     else

@@ -1,0 +1,10 @@
+﻿<Window x:Class="TimerSiewiera.Alarm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Alarm" Height="145" Width="300" ResizeMode="NoResize" WindowStyle="ToolWindow" WindowStartupLocation="CenterScreen" Topmost="True">
+    <Grid>
+        <Label Content="Koniec czasu!" HorizontalAlignment="Center" Margin="69,10,78,0" VerticalAlignment="Top" Width="147" FontSize="24"/>
+        <Button Content="OK" HorizontalAlignment="Left" Margin="69,57,0,0" VerticalAlignment="Top" Width="147" Height="45" FontSize="16" FontWeight="Bold" Click="Button_Click"/>
+
+    </Grid>
+</Window>
